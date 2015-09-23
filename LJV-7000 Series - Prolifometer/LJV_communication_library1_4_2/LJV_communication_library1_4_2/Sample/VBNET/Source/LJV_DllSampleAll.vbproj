@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG,TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34532A82-BB32-4D6F-8639-C19900DB9850}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LJV7_DllSampleAll</RootNamespace>
+    <AssemblyName>LJV7_DllSampleAll</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <SccProjectName />
+    <SccLocalPath />
+    <SccAuxPath />
+    <SccProvider />
+    <TargetFrameworkSubset />
+    <FileUpgradeFlags />
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <StartupObject>LJV7_DllSampleAll.Program</StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy $(SolutionDir)lib\LJV7_IF.dll $(TargetDir)LJV7_IF.dll
+</PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataExporter.vb" />
+    <Compile Include="Datas\DeviceData.vb" />
+    <Compile Include="Datas\MeasureData.vb" />
+    <Compile Include="Datas\ProfileData.vb" />
+    <Compile Include="Define.vb" />
+    <Compile Include="Forms\ClearErrorForm.Designer.vb">
+      <DependentUpon>ClearErrorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClearErrorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DepthProgramSelectForm.Designer.vb">
+      <DependentUpon>DepthProgramSelectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DepthProgramSelectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetBatchprofileAdvanceForm.Designer.vb">
+      <DependentUpon>GetBatchprofileAdvanceForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetBatchprofileAdvanceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetBatchProfileForm.Designer.vb">
+      <DependentUpon>GetBatchProfileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetBatchProfileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetErrorForm.Designer.vb">
+      <DependentUpon>GetErrorForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetErrorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetStorageBatchProfileForm.Designer.vb">
+      <DependentUpon>GetStorageBatchProfileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetStorageBatchProfileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetStorageDataForm.Designer.vb">
+      <DependentUpon>GetStorageDataForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetStorageDataForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GetStorageStatusForm.Designer.vb">
+      <DependentUpon>GetStorageStatusForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GetStorageStatusForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HighSpeedInitalizeForm.Designer.vb">
+      <DependentUpon>HighSpeedInitalizeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HighSpeedInitalizeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenEthernetForm.Designer.vb">
+      <DependentUpon>OpenEthernetForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OpenEthernetForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OutSelectForm.Designer.vb">
+      <DependentUpon>OutSelectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OutSelectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PreStartHighSpeedForm.Designer.vb">
+      <DependentUpon>PreStartHighSpeedForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PreStartHighSpeedForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProfileForm.Designer.vb">
+      <DependentUpon>ProfileForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProfileForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProgressForm.Designer.vb">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProgressForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingForm.Designer.vb">
+      <DependentUpon>SettingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeForm.Designer.vb">
+      <DependentUpon>TimeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NativeMethods.vb" />
+    <Compile Include="PinnedObject.vb" />
+    <Compile Include="Program.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ThreadSafeBuffer.vb" />
+    <Compile Include="Utility.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ClearErrorForm.resx">
+      <DependentUpon>ClearErrorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DepthProgramSelectForm.resx">
+      <DependentUpon>DepthProgramSelectForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetBatchprofileAdvanceForm.resx">
+      <DependentUpon>GetBatchprofileAdvanceForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetBatchProfileForm.resx">
+      <DependentUpon>GetBatchProfileForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetErrorForm.resx">
+      <DependentUpon>GetErrorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetStorageBatchProfileForm.resx">
+      <DependentUpon>GetStorageBatchProfileForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetStorageDataForm.resx">
+      <DependentUpon>GetStorageDataForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GetStorageStatusForm.resx">
+      <DependentUpon>GetStorageStatusForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HighSpeedInitalizeForm.resx">
+      <DependentUpon>HighSpeedInitalizeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenEthernetForm.resx">
+      <DependentUpon>OpenEthernetForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OutSelectForm.resx">
+      <DependentUpon>OutSelectForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PreStartHighSpeedForm.resx">
+      <DependentUpon>PreStartHighSpeedForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProfileForm.resx">
+      <DependentUpon>ProfileForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProgressForm.resx">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingForm.resx">
+      <DependentUpon>SettingForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeForm.resx">
+      <DependentUpon>TimeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\LJV7_IF.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
